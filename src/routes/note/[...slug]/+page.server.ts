@@ -4,5 +4,6 @@ export async function load ({ params }:{params:any}) {
     const res = await fetch(`https://raw.githubusercontent.com/idkfelix/notes/main/${slug}.md`);
     const mdContent = await res.text();
     const content = await compile(mdContent)
+    console.log(content)
     return { content: content };
 }

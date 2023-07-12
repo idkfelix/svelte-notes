@@ -4,6 +4,6 @@
       content: '' };
 </script>
 
-<div class="markdown-body">
+<div class="markdown-body p-5 m-10 rounded-xl">
   {@html data.content?.code}
 </div>
