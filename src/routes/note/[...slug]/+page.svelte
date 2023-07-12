@@ -4,10 +4,8 @@
       content: '' };
 </script>
 
-<svelte:head>
-  <title>{data.content?.data.fm.title}</title>
-</svelte:head>
-
-<div class="markdown-body p-5 m-10 rounded-xl">
-  {@html data.content?.code}
+<div class="m-10">
+  <div class="markdown-body p-5 rounded-xl bg-base-300">
+    {@html data.content?.code}
+  </div>
 </div>
