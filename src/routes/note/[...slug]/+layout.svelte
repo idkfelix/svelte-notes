@@ -30,19 +30,19 @@
   <div class="drawer-side">
     <label for="my-drawer-2" class="drawer-overlay"></label> 
     <ul class="menu p-4 w-64 h-full bg-base-200 text-base-content">
-        {#each files as file}
-    <li><a href={`/note/${file.sha}`}>{file.path.replace('.md', '')}</a></li>
-  {/each}
-  {#each [...folderMap] as [folder, items]}
-    <details class="menu">
-      <summary class="menu-title">{folder}</summary>
-      <ul class="menu">
-        {#each items as item}
-          <li><a href={`/note/${item.sha}`}>{item.path.split('/')[1].replace('.md', '')}</a></li>
-        {/each}
-      </ul>
-    </details>
-  {/each}
+      {#each files as file}
+        <li><a href={`/note/${file.sha}`}>{file.path.replace('.md', '')}</a></li>
+      {/each}
+      {#each [...folderMap] as [folder, items]}
+        <details class="menu">
+          <summary class="menu-title">{folder}</summary>
+          <ul class="menu">
+            {#each items as item}
+              <li><a href={`/note/${item.sha}`}>{item.path.split('/')[1].replace('.md', '')}</a></li>
+            {/each}
+          </ul>
+        </details>
+      {/each}
     </ul>
   
   </div>
