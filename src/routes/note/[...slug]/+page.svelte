@@ -1,10 +1,9 @@
 <script lang="ts">
   import './markdown.css'
-  export let data = {
-      content: ''
-  };
+  export let data: any = {
+      content: '' };
 </script>
 
 <div class="markdown-body">
-  {@html data.content}
+  {@html data.content?.code}
 </div>
