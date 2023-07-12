@@ -20,8 +20,6 @@ export async function load() {
   };
 });
 
-console.log(finalData)
-
 return {
   tree: finalData
   };

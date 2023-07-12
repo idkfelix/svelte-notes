@@ -10,6 +10,5 @@ export async function load ({ params }:{params:any}) {
     const mdBlob = await res.json();
     const mdContent = atob(mdBlob.content)
     const content = await compile(mdContent)
-    console.log(content)
     return { content: content };
 }
