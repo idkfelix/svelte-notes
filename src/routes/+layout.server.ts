@@ -1,7 +1,7 @@
-import { KEY, GIT_URL } from "$env/static/private"
+import { KEY, USER_REPO } from "$env/static/private"
 
 export async function load() {
-  const res = await fetch(GIT_URL, {
+  const res = await fetch(`https://api.github.com/repos/${USER_REPO}/git/trees/main?recursive=1`, {
     headers: { 
       Authorization: 'Bearer '+KEY
     }

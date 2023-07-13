@@ -1,8 +1,8 @@
 import { compile } from "mdsvex";
-import { KEY } from "$env/static/private"
+import { KEY, USER_REPO } from "$env/static/private"
 export async function load ({ params }:{params:any}) {
     const { slug } = params;
-    const res = await fetch(`https://api.github.com/repos/idkfelix/notes/git/blobs/${slug}`, {
+    const res = await fetch(`https://api.github.com/repos/${USER_REPO}/git/blobs/${slug}`, {
     headers: {
       Authorization: 'Bearer '+KEY
     }
