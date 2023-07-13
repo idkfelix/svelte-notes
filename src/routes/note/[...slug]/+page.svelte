@@ -1,7 +1,7 @@
 <script lang="ts">
   import './markdown.css'
   export let data: any
-  const { content } = data
+  $: content = data.content
   const meta = content.data.fm
   
 </script>
