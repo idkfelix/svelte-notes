@@ -2,7 +2,7 @@
   import './markdown.css'
   export let data: any
   $: content = data.content
-  const meta = data.content.data.fm
+  $: meta = data.content.data.fm
   
 </script>
 
@@ -16,6 +16,6 @@
 
 <div class="m-10">
   <div class="markdown-body p-5 rounded-xl bg-base-300">
-    {@html $content?.code}
+    {@html content?.code}
   </div>
 </div>
