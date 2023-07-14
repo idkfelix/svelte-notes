@@ -19,12 +19,15 @@
   });
 </script>
 
+<svelte:head>
+  <title>Svelte Notes</title>
+</svelte:head>
+
 <div class="drawer lg:drawer-open">
   <input id="my-drawer-2" type="checkbox" class="drawer-toggle" />
   <div class="drawer-content flex flex-col">
     <label for="my-drawer-2" class="btn drawer-button lg:hidden m-10 mb-0">Open File Tree</label>
-    <slot/>
-  
+    <slot/>  
   </div> 
   <div class="drawer-side">
     <label for="my-drawer-2" class="drawer-overlay"></label> 

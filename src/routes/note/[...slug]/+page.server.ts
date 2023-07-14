@@ -10,5 +10,7 @@ export async function load ({ params }:{params:any}) {
     const mdBlob = await res.json();
     const mdContent = atob(mdBlob.content)
     const content = await compile(mdContent)
-    return { content: content };
+    const htmlContent = content?.code
+    const metadata = content?.data
+    return { content: htmlContent, metadata: metadata };
 }
